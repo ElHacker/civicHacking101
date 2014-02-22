@@ -17,7 +17,13 @@ $(function() {
       "san nicolas": getRandomInt(0, 20),
       "apodaca": getRandomInt(0, 20),
     };
-    console.dir(carCrashes);
+
+    // Create a log of generated values
+    $("<p>", {
+      "class": "log-entry",
+      "html": JSON.stringify(carCrashes)
+    }).appendTo("div.log");
+
     // call it again in 5 seconds
     setTimeout(publish, 5000);
   }
